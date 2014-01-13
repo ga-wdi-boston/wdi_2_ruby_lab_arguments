@@ -25,8 +25,7 @@ class Person
 
 	def greet_people(options)
 		greeting = options[:greeting] || 'Hi'
-		binding.pry
-		options[:person].map {|person| puts '#{greeting} #{person.name}'}
+		options[:person].map { |person| "#{greeting} #{person.name}"}
 	end
 
 
