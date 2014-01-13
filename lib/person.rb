@@ -20,11 +20,11 @@
 
 
 class Person
-	attr_accessor :name, :age,:number_of_pets, :eye_color, :hair_color, :weight, :height, :number_of_pets
+	attr_accessor :name, :number_of_pets, :age, :eye_color, :hair_color, :weight, :height, :number_of_pets
 
-	def initialize(name, number_of_pets, age=0, options={})
+	def initialize(name, number_of_pets, options={})
 		@name = name
-		@age = age
+		@age = options[:age] || 0
 		@number_of_pets = [] << number_of_pets
 		@eye_color = options[:eye_color]
 		@hair_color = options[:hair_color]

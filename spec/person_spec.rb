@@ -3,10 +3,10 @@ require_relative "../lib/person"
 
 describe Person do
 	before(:each) do
-		@test_person_1 = Person.new("Jan", 1, 27, :eye_color => "brown", :hair_color => "black", :weight => 64 , :height => 158)
-		@test_person_2 = Person.new("Jenny", 4, )
-		@test_person_3 = Person.new("Peter", 1, 26, :weight => 70)
-		# @test_person_4 = Person.new("Alvin",1, :weight => 70)
+		@test_person_1 = Person.new("Jan", 1, :age => 27, :eye_color => "brown", :hair_color => "black", :weight => 64 , :height => 158)
+		@test_person_2 = Person.new("Jenny", 4, :age => 25,)
+		@test_person_3 = Person.new("Peter", 1, :age => 22, :weight => 70)
+		@test_person_4 = Person.new("Alvin", 1, :weight => 70)
 	end
 
 	describe '#initialize' do
@@ -22,8 +22,8 @@ describe Person do
 
 		it 'initialize a new person instance, check age' do
 			expect(@test_person_1.age).to eq 27
-			expect(@test_person_2.age).to eq 0
-			# expect(@test_person_4.age).to eq 0
+			expect(@test_person_2.age).to eq 25
+			expect(@test_person_4.age).to eq 0
 		end
 
 		it 'initialize a new person instance, check eye_color' do
