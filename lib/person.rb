@@ -11,8 +11,12 @@ class Person
     @pets = pets
   end
 
-  def greet(greeting='Hi')
-    greeting
+  def greet(greeting='Hi', *people)
+     if people.each { |person| return "#{greeting} #{person}"} == []
+      return greeting
+    else
+      people.each { |person| return "#{greeting} #{person}"}
+    end
   end
 end
 
@@ -34,3 +38,5 @@ puts person.age
 puts person.height
 
 puts person.weight
+
+person.greet('hello', 'bob')

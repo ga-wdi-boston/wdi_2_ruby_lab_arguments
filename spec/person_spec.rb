@@ -31,10 +31,16 @@ describe Person do
   describe '#greet' do
     person = Person.new('Jordan')
     it 'returns a default of Hi' do
-      expect(person.greet). to eq 'Hi'
+      expect(person.greet('Hi')). to eq 'Hi'
     end
     it 'otherwise, the passed argument' do
-      expect(person.greet('Hello')). to eq 'Hello'
+      expect(person.greet('Hello', 'Bob')). to eq 'Hello Bob'
+    end
+
+    person2 = Person.new('Dess')
+    it 'puts greeting with person name' do
+      expect(person.greet('Hello', person2.name)).
+        to eq 'Hello Dess'
     end
   end
 
