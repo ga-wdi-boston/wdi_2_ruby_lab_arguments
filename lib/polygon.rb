@@ -12,4 +12,35 @@ class Polygon
 		# (n − 2)180 degrees
 		(@num_sides - 2)*180
 	end
+
+	def polygon_name
+		case @num_sides
+		when 3
+			if (@side_length_array[0] == @side_length_array[1] && @side_length_array[0] == @side_length_array[2])
+				"Equilateral Triangle"
+			elsif (@side_length_array[0] != @side_length_array[1] && @side_length_array[0] != @side_length_array[2] && @side_length_array[1] != @side_length_array[2])
+				"Scalene Triangle"
+			elsif (@side_length_array[0] == @side_length_array[1] || @side_length_array[0] == @side_length_array[2] || @side_length_array[1] == @side_length_array[2])
+				"Isosceles Triangle"
+			end
+		when 4
+			if (@side_length_array[0] == @side_length_array[1])
+				"Square"
+			else
+				"Rectangle"
+			end
+		when 5
+			"Pentagon"
+		when 6
+			"Hexagon"
+		when 7
+			"Heptagon"
+		when 8
+			"Octagon"
+		when 9
+			"Nonagon (to some)"
+		when 10
+			"Decagon"
+		end
+	end
 end

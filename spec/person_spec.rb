@@ -31,7 +31,7 @@ describe Person do
 		end
 		it 'can greet any number of people' do
 			person = Person.new("Matt")
-			expect(person.greet_people({ people: [@mike, @prescott, @nick] })).to eq ['Hi Mike', 'Hi Prescott', 'Hi Nick']
+			expect(person.greet_people( people: [@mike, @prescott, @nick] )).to eq ['Hi Mike', 'Hi Prescott', 'Hi Nick']
 		end
 	end
 

@@ -24,8 +24,23 @@ describe Polygon do
 		end
 	end
 
-	describe 'number_of_corners' do
-
+	describe '#polygon_name' do
+		it 'should call a triangle by the correct type of triangle' do
+			shape1 = Polygon.new(3,3,3)
+			shape2 = Polygon.new(3,4,5)
+			shape3 = Polygon.new(3,3,5)
+			expect(shape1.polygon_name).to eq "Equilateral Triangle"
+			expect(shape2.polygon_name).to eq "Scalene Triangle"
+			expect(shape3.polygon_name).to eq "Isosceles Triangle"
+		end
+		it 'should call a square a square' do
+			shape = Polygon.new(3,3,3,3)
+			expect(shape.polygon_name).to eq "Square"
+		end
+		it 'should call a rectangle a rectangle' do
+			shape = Polygon.new(3,4,3,4)
+			expect(shape.polygon_name).to eq "Rectangle"
+		end
 	end
 
 end
