@@ -14,12 +14,12 @@ class Person
   def weight_in_stones
   end
 
-  def greet(greeting='Hi', *people)
-     if people.each { |person| return "#{greeting} #{person}"} == []
-      return greeting
-    else
-      people.each { |person| return "#{greeting} #{person}"}
-    end
+  def greet(options={})
+     greeting = options[:greeting] || 'Hi'
+     people = options[:people]
+     statement = ''
+     people.each { |person| statement << "#{greeting} #{person}. "}
+     statement
   end
 end
 
@@ -42,4 +42,4 @@ puts person.height
 
 puts person.weight
 
-person.greet('hello', 'bob')
+puts person.greet({:people => ['Bob', 'Kelly']})

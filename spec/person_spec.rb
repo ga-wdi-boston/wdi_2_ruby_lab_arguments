@@ -30,16 +30,11 @@ describe Person do
   describe '#greet' do
     person = Person.new('Jordan')
     it 'returns a default of Hi' do
-      expect(person.greet('Hi')). to eq 'Hi'
-    end
-    it 'otherwise, the passed argument' do
-      expect(person.greet('Hello', 'Bob')). to eq 'Hello Bob'
+      expect(person.greet({:people => ['Bob', 'Kelly']})). to eq 'Hi Bob. Hi Kelly. '
     end
 
-    person2 = Person.new('Dess')
-    it 'puts greeting with person name' do
-      expect(person.greet('Hello', person2.name)).
-        to eq 'Hello Dess'
+    it 'otherwise it returns greeting specified in options' do
+      expect(person.greet({:greeting => 'Why, hello there', :people => ['Bob', 'Kelly']})).to eq 'Why, hello there Bob. Why, hello there Kelly. '
     end
   end
 
