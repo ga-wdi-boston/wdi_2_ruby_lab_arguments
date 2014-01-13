@@ -12,7 +12,7 @@ class Person
   end
 
   def weight_in_stones
-    9.44838
+    @weight * 0.15747
   end
 
   def greet(options={})
@@ -36,11 +36,14 @@ end
 
 # puts person.height
 
-person = Person.new('Jordan')
+# person = Person.new('Jordan')
 
-puts person.age
-puts person.height
+# puts person.age
+# puts person.height
 
+# puts person.weight
+
+# puts person.greet({:people => ['Bob', 'Kelly']})
+
+person = Person.new('Jordan', 31, {weight: 60})
 puts person.weight
-
-puts person.greet({:people => ['Bob', 'Kelly']})
