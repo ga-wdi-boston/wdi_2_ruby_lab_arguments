@@ -6,4 +6,8 @@ class Polygon
     @sides_length = sides_length
   end
 
+  def number_of_corners
+    @num_of_sides
+  end
+
 end
