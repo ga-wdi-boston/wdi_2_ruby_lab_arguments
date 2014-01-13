@@ -5,7 +5,7 @@ describe Person do
 	before(:each) do
 		@test_person_1 = Person.new("Jan", 1, 27, :eye_color => "brown", :hair_color => "black", :weight => 64 , :height => 158)
 		@test_person_2 = Person.new("Jenny", 4, 25, )
-
+		@test_person_3 = Person.new("Peter", 1, 26, :weight => 70)
 	end
 
 	describe '#initialize' do
@@ -43,7 +43,13 @@ describe Person do
 			expect(@test_person_1.number_of_pets).to eq [1]
 			expect(@test_person_2.number_of_pets).to eq [4]
 		end
+	end
 
+	describe '#weight_in_stones' do
+		it 'converts weight from kg to stones' do
+			expect(@test_person_1.weight_in_stones).to eq 10.095808
+			expect(@test_person_3.weight_in_stones).to eq 11.04229
+		end
 	end
 end
 

@@ -31,4 +31,11 @@ class Person
 		@weight = options[:weight] || rand(60..100)
 		@height = options[:height] || rand(150..200)
 	end
+#stone = kg * 0.15747
+
+	def weight_in_stones
+		person_weight_in_stones = @weight * 0.157747
+		return person_weight_in_stones
+	end
+
 end
