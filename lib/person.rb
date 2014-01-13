@@ -1,9 +1,9 @@
 class Person
   attr_accessor :name, :age, :weight, :height, :eye_color, :hair_color, :pets
 
-  def initialize(name, age=0, options={})
+  def initialize(name, options={})
     @name = name
-    @age = age
+    @age = options[:age] || 0
     @weight = options[:weight] || rand(60..100)
     @height = options[:height] || rand(150..200)
     @eye_color = options[:eye_color] || ''
@@ -45,5 +45,6 @@ end
 
 # puts person.greet({:people => ['Bob', 'Kelly']})
 
-person = Person.new('Jordan', 31, {weight: 60})
+person = Person.new('Jordan', {weight: 60, pets: ['Rosie','Puppy']})
 puts person.weight
+puts person.pets
