@@ -30,7 +30,12 @@ describe Person do
 
   describe '#greet' do
     person = Person.new('Jordan')
-    expect(person.greet). to eq 'Hi'
+    it 'returns a default of Hi' do
+      expect(person.greet). to eq 'Hi'
+    end
+    it 'otherwise, the passed argument' do
+      expect(person.greet('Hello')). to eq 'Hello'
+    end
   end
 
 end

@@ -10,6 +10,10 @@ class Person
     @hair_color = hair_color
     @pets = pets
   end
+
+  def greet(greeting='Hi')
+    greeting
+  end
 end
 
 
