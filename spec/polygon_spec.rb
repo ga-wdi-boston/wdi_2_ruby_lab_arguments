@@ -9,11 +9,17 @@ describe Polygon do
     end
   end
 
-  # describe '#sum_of_interior_angles' do
-  #   it '' do
-  #     expect()
-  #   end
-  # end
+  describe '#sum_of_interior_angles' do
+    it 'returns 180 with 3 sides' do
+      polygon = Polygon.new(2,2,2)
+      expect(polygon.sum_of_interior_angles).to eq 180
+    end
+
+    it 'returns 90 with 4 sides' do
+      polygon = Polygon.new(2,2,2,2)
+      expect(polygon.sum_of_interior_angles).to eq 360
+    end
+  end
 
   describe '#number_of_corners' do
     polygon = Polygon.new(2,2,2)

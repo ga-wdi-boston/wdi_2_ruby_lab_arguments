@@ -10,4 +10,8 @@ class Polygon
     @num_of_sides
   end
 
+  def sum_of_interior_angles
+    180 * (@num_of_sides - 2)
+  end
+
 end
