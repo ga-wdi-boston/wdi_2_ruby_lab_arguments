@@ -2,6 +2,8 @@ require 'spec_helper'
 require_relative '../lib/polygon'
 
 describe Polygon do
+
+  # Make sure that the @num_of_sides is set when initialized
   describe '#initialize' do
     polygon = Polygon.new(2,2,2)
     it 'returns num of sides of 3' do

@@ -23,28 +23,3 @@ class Person
      statement
   end
 end
-
-
-# Testing
-
-# person = Person.new('Jordan', 160, '5ft 10in', 'brown', 'brown', 31, 'Rosie', 'Puppy')
-
-# puts person.pets
-
-
-# person = Person.new('Jordan', 160, 'brown', 'brown', 10, 10, 'Rosie', 'Puppy')
-
-# puts person.height
-
-# person = Person.new('Jordan')
-
-# puts person.age
-# puts person.height
-
-# puts person.weight
-
-# puts person.greet({:people => ['Bob', 'Kelly']})
-
-person = Person.new('Jordan', {weight: 60, pets: ['Rosie','Puppy']})
-puts person.weight
-puts person.pets

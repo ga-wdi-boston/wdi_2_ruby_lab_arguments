@@ -10,11 +10,12 @@ class Pet
     @claws = options[:claws]
     @backpacks = options[:backpacks]
     @teeth = options[:teeth]
+
   end
 end
 
 # Test code
-pet = Pet.new('Bowser', 'bunny with backpack', {:claws => 10})
+pet = Pet.new('Bowser')
 
 puts pet.species
 
