@@ -39,13 +39,13 @@ describe Person do
   end
 
 
-  # describe '#convert' do
-  #   it 'converts weight from kg to stones' do
-  #     new_person2 = Person.new('Gary', 35, 60, 150, ['cat'])
-  #     new_person2.weight = 60
-  #     expect(new_person2.weight.convert).to eq 9.44838
-  #   end
-  # end
+  describe '#to_stones' do
+    it 'converts weight from kg to stones' do
+      new_person2 = Person.new('Gary', 35, 60, 150, ['cat'])
+      new_person2.weight = 60
+      expect(new_person2.to_stones).to eq 9.448818897637796
+    end
+  end
 end
 
   # describe '#greet' do

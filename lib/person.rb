@@ -11,9 +11,9 @@ class Person
     @hair_color = options[:hair_color]
   end
 
-  # def to_stones(x)
-  #  weight = x / 6.35
-  # end
+  def to_stones
+   (@weight / 6.35)
+  end
 
 end
 
