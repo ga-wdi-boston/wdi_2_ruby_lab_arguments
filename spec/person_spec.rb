@@ -51,5 +51,20 @@ describe Person do
 			expect(@test_person_3.weight_in_stones).to eq 11.04229
 		end
 	end
+
+	describe '#greeting_people_objects' do
+		it 'greets people objects' do
+			expect(@test_person_1.greeting_people_objects(:greeting => "Hola", :people => [@test_person_2.name, @test_person_3.name])).to eq "Hola Jenny Hola Peter "
+		end
+	end
 end
+
+
+
+
+
+
+
+
+
 

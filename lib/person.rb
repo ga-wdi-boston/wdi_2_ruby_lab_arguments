@@ -31,6 +31,7 @@ class Person
 		@weight = options[:weight] || rand(60..100)
 		@height = options[:height] || rand(150..200)
 	end
+
 #stone = kg * 0.15747
 
 	def weight_in_stones
@@ -38,4 +39,11 @@ class Person
 		return person_weight_in_stones
 	end
 
+	def greeting_people_objects (options = {})
+		greeting = options[:greeting] || "Hi"
+		people = options[:people]
+		greet_result = ""
+		people.map {|person| greet_result << "#{greeting} #{person} "}
+		return greet_result
+	end
 end
