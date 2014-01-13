@@ -1,14 +1,17 @@
 class Person
   attr_accessor :name, :age, :weight, :height, :eye_color, :hair_color, :pets
 
-  def initialize(name, eye_color='', hair_color='', age=0, weight=rand(60..100), height=rand(150..200), *pets)
+  def initialize(name, age=0, options={})
     @name = name
     @age = age
-    @weight = weight
-    @height = height
-    @eye_color = eye_color
-    @hair_color = hair_color
-    @pets = pets
+    @weight = options[:weight] || rand(60..100)
+    @height = options[:height] || rand(150..200)
+    @eye_color = options[:eye_color] || ''
+    @hair_color = options[:hair_color] || ''
+    @pets = options[:pets] || []
+  end
+
+  def weight_in_stones
   end
 
   def greet(greeting='Hi', *people)
@@ -32,7 +35,7 @@ end
 
 # puts person.height
 
-person = Person.new('Jordan', 'brown', 'brown')
+person = Person.new('Jordan')
 
 puts person.age
 puts person.height

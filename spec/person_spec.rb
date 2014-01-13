@@ -3,12 +3,12 @@ require_relative '../lib/person'
 
 describe Person do
   describe '#initialize' do
+    person = Person.new('Jordan')
+
     it 'returns an array for pets using splat' do
-      person = Person.new('Jordan', 'brown', 'brown', 160, 31, 200, 'Rosie', 'Puppy')
       expect(person.pets.class).to eq Array
     end
 
-    person = Person.new('Jordan', 'brown', 'brown')
     it 'returns 0 for age if none is provided' do
       expect(person.age).to eq 0
     end
@@ -21,7 +21,6 @@ describe Person do
       expect(60..100).to include person.weight
     end
 
-    person = Person.new('Jordan')
     it 'returns a default empty string for eye_color and hair_color' do
       expect(person.eye_color).to eq ''
       expect(person.hair_color).to eq ''
@@ -42,6 +41,12 @@ describe Person do
       expect(person.greet('Hello', person2.name)).
         to eq 'Hello Dess'
     end
+  end
+
+  describe '#weight_in_stones' do
+    it 'returns ' do
+    end
+
   end
 
 end
