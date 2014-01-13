@@ -1,8 +1,9 @@
 class Polygon
   attr_accessor :num_of_sides, :sides_length
 
-  def initialize(num_of_sides=3)
-    @num_of_sides = num_of_sides
+  def initialize(*sides_length)
+    @num_of_sides = sides_length.length
+    @sides_length = sides_length
   end
 
 end
