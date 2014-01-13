@@ -39,5 +39,10 @@ describe Polygon do
 		end
 	end
 
-
+	describe '#sum_of_interior_angles' do
+		it 'checks what is the sum of the interior angles' do
+			expect(@test_polygon_1.sum_of_interior_angles).to eq 360
+			expect(@test_polygon_2.sum_of_interior_angles).to eq 180
+		end
+	end
 end

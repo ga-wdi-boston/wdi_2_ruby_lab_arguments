@@ -20,4 +20,8 @@ class Polygon
 			number_of_corners = @number_of_sides
 		end
 
+# n = number of sides and to get sum_of_interior_angles use :: 180(n - 2)
+		def sum_of_interior_angles
+			(@number_of_sides - 2) * 180
+		end
 end
