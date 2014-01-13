@@ -39,7 +39,9 @@ describe Person do
   end
 
   describe '#weight_in_stones' do
-    it 'returns ' do
+    it 'returns 9.44838 for 60kg person' do
+      person = Person.new('Jordan', {weight: 60})
+      expect(person.weight_in_stones).to eq 9.44838
     end
 
   end
