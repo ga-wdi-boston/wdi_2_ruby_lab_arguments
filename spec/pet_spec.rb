@@ -5,7 +5,7 @@ require_relative "../lib/pet"
 describe Pet do
 	before(:each) do
 		@test_pet_1 = Pet.new("Scout", :species => "rabbit", :number_of_claws => 20, :number_of_teeth => 30, :number_of_backpacks => 2)
-		@test_pet_2 = Pet.new("Rufus", :number_of_backpacks =>1 )
+		@test_pet_2 = Pet.new("Rufus", :number_of_backpacks => 1 )
 		@test_pet_3 = Pet.new("Theo", )
 	end
 	describe '#initialize' do
