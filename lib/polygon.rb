@@ -3,7 +3,7 @@ class Polygon
 
   def initialize (sides, lengths)
     @sides = sides
-    @lengths = lengths
+    @lengths = *lengths
   end
 
   def sum_of_interior_angles
@@ -11,11 +11,10 @@ class Polygon
   end
 
   def number_of_corners
+    @sides
   end
 
   def degree_of_freedom
-  end
-
-  def area
+    (@sides * 2)
   end
 end

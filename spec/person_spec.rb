@@ -28,7 +28,8 @@ describe Person do
         44,
         80,
         190,
-        ['dog','cat']
+        ['dog','cat'],
+        eye_color: "green"
         )
       expect(new_person1.name).to eq 'Greg'
       expect(new_person1.age).to eq 44
