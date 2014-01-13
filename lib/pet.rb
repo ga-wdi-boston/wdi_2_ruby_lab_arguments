@@ -7,12 +7,13 @@
 
 class Pet
 	attr_accessor :name, :species, :number_of_claws, :number_of_teeth, :number_of_backpacks
-	def initialize(name, number_of_claws, number_of_teeth, number_of_backpacks, species=["cat", "dog", "bunny wearing backpack"].sample)
-
+	def initialize(name, options = {})
 		@name = name
-		@species = species
-		@number_of_claws = number_of_claws
-		@number_of_teeth = number_of_teeth
-		@number_of_backpacks = number_of_backpacks
+		@species = options[:species] || ["cat", "dog", "bunny wearing backpack"].sample
+		@number_of_claws = options[:number_of_claws]
+		@number_of_teeth = options[:number_of_teeth]
+		@number_of_backpacks = options[:number_of_backpacks]
 	end
 end
+
+
