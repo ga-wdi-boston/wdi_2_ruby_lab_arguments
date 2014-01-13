@@ -5,7 +5,7 @@
 # sum_of_interior_angles
 # number_of_corners
 # degrees_of_freedom
-# area
+# area ==  told this one was extra credit !!!!!!!
 
 
 class Polygon
@@ -24,4 +24,9 @@ class Polygon
 		def sum_of_interior_angles
 			(@number_of_sides - 2) * 180
 		end
+# n = number of sides and 2 * n = degrees of freedom
+		def deg_of_freedom
+			(@number_of_sides * 2)
+		end
+
 end

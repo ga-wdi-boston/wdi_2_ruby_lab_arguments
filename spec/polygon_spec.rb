@@ -1,13 +1,6 @@
 require 'spec_helper'
 require_relative "../lib/polygon"
 
-# You should have methods to return:
-
-# sum_of_interior_angles
-# number_of_corners
-# degrees_of_freedom
-# area
-
 
 describe Polygon do
 	before(:each) do
@@ -45,4 +38,12 @@ describe Polygon do
 			expect(@test_polygon_2.sum_of_interior_angles).to eq 180
 		end
 	end
+
+	describe '#deg_of_freedom' do
+		it 'checks what is the sum of the interior angles' do
+			expect(@test_polygon_1.deg_of_freedom).to eq 8
+			expect(@test_polygon_2.deg_of_freedom).to eq 6
+		end
+	end
+
 end
