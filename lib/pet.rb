@@ -7,7 +7,7 @@
 
 class Pet
 	attr_accessor :name, :species, :number_of_claws, :number_of_teeth, :number_of_backpacks
-	def initialize(name, species=rand("cat", "dog", "bunny wearing backpack"), number_of_claws, number_of_teeth,number_of_backpacks)
+	def initialize(name, number_of_claws, number_of_teeth, number_of_backpacks, species=["cat", "dog", "bunny wearing backpack"].sample)
 
 		@name = name
 		@species = species
