@@ -41,7 +41,7 @@ If no height is provided, the height should be randomly assigned between 150-200
 
 If no eye or hair colors are provided, don't do anything with them.
 
-Write a method that returns their weight as [stones](http://en.wikipedia.org/wiki/Stone_(unit)). All other properties should be able to be get/set.
+Write a method that returns their weight as [stones](http://en.wikipedia.org/wiki/Stone_(unit)). All properties should be able to be get/set.
 
 Write a method that will allow them to greet any number of other people objects (not strings) with a greeting (default value, "Hi").
 
