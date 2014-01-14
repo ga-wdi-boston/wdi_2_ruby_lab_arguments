@@ -11,10 +11,11 @@ class Person
 	end
 
 	def weight_to_stone
-		@weights * 6.35
+		@weights.to_f * 6.35
 	end
-	def greeting_people(greeting = 'Hi', *people)
-		people.each{|person| "#{greeting} #{person}"}
+	def greeting_people(option_hash, *people)
+		greeting = option_hash[:greeting] || 'Hi'
+		people.each {|person| puts "#{greeting} #{person.name}"}
 	end
 end
 

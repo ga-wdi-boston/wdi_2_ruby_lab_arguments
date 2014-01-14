@@ -27,4 +27,18 @@ describe Person do
 		expect(person4.height.to_i).to be <= 200
 		end
 	end
+	describe '#weight_to_stone' do
+		it 'should return the correct value of the weight_to_stone' do
+			person5 = Person.new('Jim', {:age =>'100000days', :weights => '70kg', :height => '175cm', :eye_color =>'black', :hair_color =>'brown'}, 'kim', 'tom')
+			expect(person5.weight_to_stone).to eq 444.5
+		end
+	end
+	describe '#greeting_people' do
+		it 'should greeting each people' do
+			person6 = Person.new('Jim', {:age =>'100000days', :weights => '70kg', :height => '175cm', :eye_color =>'black', :hair_color =>'brown'}, 'kim', 'tom')
+			person7 = Person.new('Tom', { :weights => '70kg', :height => '175cm', :eye_color =>'black', :hair_color =>'brown'}, 'kim', 'tom')
+			person8 = Person.new('Jim', {:age =>'100000days', :height => '175cm', :eye_color =>'black', :hair_color =>'brown'}, 'kim', 'tom')
+			expect(person6.greeting_people({}, person7, person8)).to be ['Hi Tom', 'Hi Jim']
+		end
+	end
 end
