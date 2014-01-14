@@ -51,4 +51,20 @@ describe Person do
       expect(person.weight_in_stone).to be_within(0.01).of(12.59)
     end
   end
+
+  describe '#greet' do
+    it 'greets other people with a default greeting' do
+      person = Person.new('Janice')
+      people_to_be_greeted = [Person.new('Jordan'), Person.new('Karen')]
+
+      expect(person.greet(people_to_be_greeted)).to eq ['Hi Jordan', 'Hi Karen']
+    end
+
+    it 'greets other people with a custom greeting' do
+      person = Person.new('Janice')
+      people_to_be_greeted = [Person.new('Jordan'), Person.new('Karen')]
+
+      expect(person.greet(people_to_be_greeted, 'Yo')).to eq ['Yo Jordan', 'Yo Karen']
+    end
+  end
 end

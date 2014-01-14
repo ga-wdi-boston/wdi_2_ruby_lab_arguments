@@ -14,4 +14,8 @@ class Person
   def weight_in_stone
     @weight / 6.35
   end
+
+  def greet(people, greeting = 'Hi')
+    people.map{ |person| "#{greeting} #{person.name}" }
+  end
 end
