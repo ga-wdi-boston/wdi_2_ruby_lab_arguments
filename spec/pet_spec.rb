@@ -17,7 +17,7 @@ describe Pet do
   describe 'initialize' do
     it 'assigns the pet attributes' do
       my_pet = Pet.new(
-        'Dean',
+        'Dean'
         )
       expect(my_pet.name).to eq 'Dean'
     end

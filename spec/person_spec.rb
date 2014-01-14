@@ -9,7 +9,7 @@ describe Person do
         40,
         70,
         160,
-        'cat',
+        ['cat'],
         eye_color: "hazel",
         hair_color: "blond"
         )
@@ -17,6 +17,7 @@ describe Person do
       expect(new_person.age).to eq 40
       expect([60..100]).to include new_person.weight
       expect([150..200]).to include new_person.height
+      expect(new_person.pets).to eq ['cat']
       expect(new_person.eye_color).to eq 'hazel'
       expect(new_person.hair_color).to eq 'blond'
     end
@@ -33,11 +34,10 @@ describe Person do
         )
       expect(new_person1.name).to eq 'Greg'
       expect(new_person1.age).to eq 44
+      expect(new_person1.pets).to eq ['dog','cat']
       expect([60..100]).to include new_person1.weight
       expect([150..200]).to include new_person1.height
-      expect(new_person1.pets).to eq ['dog','cat']
   end
-
 
   describe '#to_stones' do
     it 'converts weight from kg to stones' do
@@ -46,11 +46,15 @@ describe Person do
       expect(new_person2.to_stones).to eq 9.448818897637796
     end
   end
-end
 
   # describe '#greet' do
   #   it 'allows people to greet people objects' do
-
+  #     new_persona = Person.new('Gary', 35, 60, 150, ['cat'])
+  #     new_personb = Person.new('Joe', 35, 60, 150, ['cat'])
+  #     new_personc = Person.new('Jim', 35, 60, 150, ['cat'])
+  #     new_persond = Person.new('Josh', 35, 60, 150, ['cat'])
+  #     *names = [new_personb.name, new_personc.name, new_persond.name]
+  #     expect(new_persona.greet(*names, "Hello, ")).to eq "Hello, Joe."
   #   end
   # end
-
+end

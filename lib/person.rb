@@ -15,9 +15,7 @@ class Person
    (@weight / 6.35)
   end
 
-end
-
-  # def greet(greeting, *names)
-  #  people.each {|each_unit_of_people| puts '"#{greeting}" @name.'}
+  # def greet(*names, greeting)
+  #  names.each {|name| puts '"#{greeting}" *names.'}
   # end
-
+end
