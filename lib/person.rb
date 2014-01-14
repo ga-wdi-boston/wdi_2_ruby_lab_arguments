@@ -15,12 +15,7 @@ class Person
     @weight / 63.5
   end
 # Defined method to allow a person to greet others
-  #def greeting (message = 'Hi', *people)
-    #people.map { |person| "#{message} #{person.name}" } # Each returns the original array, doesn't do anything with the code in the block
-  #end
-#end
-
-  def greeting (message = 'Hi', people = {})
+  def greeting(message = 'Hi', people = {})
     people[:list].map { |person| "#{message} #{person.name}" }
   end
 end

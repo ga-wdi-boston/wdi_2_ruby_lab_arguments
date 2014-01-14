@@ -2,6 +2,7 @@ require 'spec_helper'
 require_relative '../lib/pet'
 
 describe Pet do
+
   describe '#initialize' do
     it 'creates a pet with a name' do
       new_pet = Pet.new('Spot')
