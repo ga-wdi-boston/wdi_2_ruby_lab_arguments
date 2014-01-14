@@ -19,6 +19,13 @@ class Polygon
   end
 
   def area
-    1.73205
+    # area = 1/2 x perimeter x apothem
+    # apothem = @sides_length / (2 * tan * (180 / # num_of_sides))
+    apothem = @sides_length[0] / (2 * Math::tan(180 / @num_of_sides))
+    0.5 * @num_of_sides * @sides_length[0]
   end
 end
+
+
+polygon = Polygon.new(2,2,2,2)
+puts polygon.area

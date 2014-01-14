@@ -48,9 +48,9 @@ describe Polygon do
       expect(polygon.area).to eq 1.73205
     end
 
-    it 'returns 4 for a square 2,2' do
-      polygon = Polygon.new(2,2)
-      expect(polygon.area).to eq 4
+    it 'returns 4 for a square 2,2,2,2' do
+      polygon = Polygon.new(2,2,2,2)
+      expect(polygon.area).to eq 4.0
     end
   end
 
