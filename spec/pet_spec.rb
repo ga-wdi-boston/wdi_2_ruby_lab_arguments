@@ -20,5 +20,23 @@ describe Pet do
 
       expect(pet.species).to eq 'hamster'
     end
+
+    it 'assigns a number of claws' do
+      pet = Pet.new('Bunbun', 'rabbit', claws: 4)
+
+      expect(pet.claws).to eq 4
+    end
+
+    it 'assigns a number of teeth' do
+      pet = Pet.new('Bunbun', 'rabbit', teeth: 12)
+
+      expect(pet.teeth).to eq 12
+    end
+
+    it 'assigns a number of backpacks' do
+      pet = Pet.new('Bunbun', 'rabbit', backpacks: 2)
+
+      expect(pet.backpacks).to eq 2
+    end
   end
 end
