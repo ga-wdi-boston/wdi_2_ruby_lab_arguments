@@ -21,11 +21,36 @@ class Polygon
 
   def name
     polygons = [nil, nil, "triangle", "square", "pentagon",
-                "hexagon", "octagon", "nonagon", "decagon", nil,
-                "dodecagon"]
+                "hexagon", "heptagon", "octagon", "nonagon", "decagon", "hendecagon",
+                "dodecagon", "tridecagon", "tetradecagon",
+                "pentadecagon"]
     polygons[@sides.length - 1]
+  end
+
+  def area
+    points = {}
+    @sides.length.times do |num|
+      points[("side#{num + 1}".to_sym)] = [] # Fill hash with "sideX" descriptors
+    end
+
+    puts points
+
+    radial_angles = []
+
+  end
+
+
+  def find_pos(length, angle)
+    pos = [length*Math.cos(angle), length*Math.sin(angle)]
+  end
+
+  def find_dist(p1, p2)
+    dist = Math.sqrt((p2[0] - p1[0]) ** 2 + (p2[1] - p1[1]) ** 2)
   end
 end
 
 class PolygonError < StandardError
 end
+
+pentagon = Polygon.new(5,5,5,5,5)
+pentagon.area
