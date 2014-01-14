@@ -1,3 +1,4 @@
+require 'pry'
 # Method with single required argument
 def square(x)
 	x ** 2
@@ -46,6 +47,7 @@ puts greet "Hi"
 def greet_people(greeting, *people)
 	people.each {|person| puts "#{greeting} #{person}"}
 end
+binding.pry
 greet_people("Howdy", "Chris", "Anne", "Tom")
 greet_people("Hi", "Brian", "Kelly", "Kim", "Ryan")
 
