@@ -13,10 +13,3 @@ class Pet
 
   end
 end
-
-# Test code
-pet = Pet.new('Bowser')
-
-puts pet.species
-
-puts pet.claws
