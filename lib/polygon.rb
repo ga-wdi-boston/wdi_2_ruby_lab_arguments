@@ -26,7 +26,3 @@ class Polygon
     (0.5 * @num_of_sides * @sides_length[0] * apothem).round(3)
   end
 end
-
-
-polygon = Polygon.new(2,2,2,2)
-puts polygon.area
