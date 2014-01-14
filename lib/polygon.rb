@@ -25,4 +25,17 @@ class Polygon
     apothem = @sides_length[0] / (2 * Math::tan(tan_arg))
     (0.5 * @num_of_sides * @sides_length[0] * apothem).round(3)
   end
+
+  def name
+    names = [0,1,2,
+      'Triangle',
+      'Quadrilateral',
+      'Pentagon',
+      'Hexagon',
+      'Heptagon',
+      'Octagon',
+      'Nonagon',
+      'Decagon']
+    names[@num_of_sides]
+  end
 end

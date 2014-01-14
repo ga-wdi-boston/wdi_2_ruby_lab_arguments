@@ -54,4 +54,16 @@ describe Polygon do
     end
   end
 
+  describe '#name' do
+    it 'returns triangle when there are 3 sides' do
+      polygon = Polygon.new(5,5,5)
+      expect(polygon.name).to eq 'Triangle'
+    end
+
+    it 'returns square when there are 4 sides' do
+      polygon = Polygon.new(5,5,5,5)
+      expect(polygon.name).to eq 'Quadrilateral'
+    end
+  end
+
 end
