@@ -44,9 +44,15 @@ describe Person do
  		expect(person1.hair_color).to eq nil
  	end
 
- 	# it '#stones' do
- 	# 	person7 = Person.new("Joaquin", 56, 67, 164, "blue", "gray", 6)
+ 	it '#stones kg to stones weight conversion' do
+ 		person1 = Person.new("Bob", :weight => 80)
 
- 	# 	expect(person7.stones).to eq 10.550691
- 	# end
+ 		expect(person1.stones).to eq 12.59784
+ 	end
+
+ 	it '#greeting' do
+ 		person1 = Person.new(:greeting => "Bonjour", :people => "Mary")
+
+ 		expect(person1.greeting(:greeting => "Bonjour", :people => "Mary")).to eq "Bonjour Mary"
+ 	end
 end
