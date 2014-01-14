@@ -39,4 +39,12 @@ describe Polygon do
       expect(@triangle.sum_of_interior_angles).to eq 180
     end
   end
+
+  describe '#name' do
+    it 'returns a possible name for the polygon' do
+      expect(@rectangle.name).to eq 'rectangle'
+      expect(@septagon.name).to eq 'septagon'
+      expect(@triangle.name).to eq 'triangle'
+    end
+  end
 end
