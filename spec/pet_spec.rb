@@ -15,27 +15,36 @@ describe Pet do
       expect(['cat', 'dog', 'bunny wearing backpack']).to include pet.species
     end
 
-    it 'allows the random species to be overridden with an argument' do
-      pet = Pet.new('Sparky', 'hamster')
+    it 'assigns a species' do
+      pet = Pet.new('Sparky', species: 'hamster')
 
       expect(pet.species).to eq 'hamster'
     end
 
     it 'assigns a number of claws' do
-      pet = Pet.new('Bunbun', 'rabbit', claws: 4)
+      pet = Pet.new('Bunbun', claws: 4)
 
       expect(pet.claws).to eq 4
     end
 
     it 'assigns a number of teeth' do
-      pet = Pet.new('Bunbun', 'rabbit', teeth: 12)
+      pet = Pet.new('Bunbun', teeth: 12)
 
       expect(pet.teeth).to eq 12
     end
 
     it 'assigns a number of backpacks' do
-      pet = Pet.new('Bunbun', 'rabbit', backpacks: 2)
+      pet = Pet.new('Bunbun', backpacks: 2)
 
+      expect(pet.backpacks).to eq 2
+    end
+
+    it 'assigns species, claws, teeth, and backpacks' do
+      pet = Pet.new('Bunbun', species: 'rabbit', claws: 4, teeth: 12, backpacks: 2)
+
+      expect(pet.species).to eq 'rabbit'
+      expect(pet.claws).to eq 4
+      expect(pet.teeth).to eq 12
       expect(pet.backpacks).to eq 2
     end
   end
