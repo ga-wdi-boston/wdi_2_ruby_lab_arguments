@@ -43,9 +43,9 @@ describe Polygon do
   end
 
   describe '#area' do
-    it 'returns 1.73205 for a triangle 2,2,2' do
-      polygon = Polygon.new(2,2,2)
-      expect(polygon.area).to eq 1.73205
+    it 'returns 1.73205 for a triangle 5,5,5' do
+      polygon = Polygon.new(5,5,5)
+      expect(polygon.area).to eq 10.825
     end
 
     it 'returns 4 for a square 2,2,2,2' do

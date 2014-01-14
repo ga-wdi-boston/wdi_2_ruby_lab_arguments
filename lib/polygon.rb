@@ -21,8 +21,9 @@ class Polygon
   def area
     # area = 1/2 x perimeter x apothem
     # apothem = @sides_length / (2 * tan * (180 / # num_of_sides))
-    apothem = @sides_length[0] / (2 * Math::tan(180 / @num_of_sides))
-    0.5 * @num_of_sides * @sides_length[0]
+    tan_arg = Math::PI / @num_of_sides
+    apothem = @sides_length[0] / (2 * Math::tan(tan_arg))
+    (0.5 * @num_of_sides * @sides_length[0] * apothem).round(3)
   end
 end
 
