@@ -30,11 +30,17 @@ describe Polygon do
     end
   end
 
-  # describe '#degrees_of_freedom' do
-  #   it '' do
-  #     expect()
-  #   end
-  # end
+  describe '#degrees_of_freedom' do
+    it 'return 6 for triangle' do
+      polygon = Polygon.new(2,2,2)
+      expect(polygon.degrees_of_freedom).to eq 6
+    end
+
+    it 'return 8 for triangle' do
+      polygon = Polygon.new(2,2,2, 2)
+      expect(polygon.degrees_of_freedom).to eq 8
+    end
+  end
 
   # describe '#area' do
   #   it '' do

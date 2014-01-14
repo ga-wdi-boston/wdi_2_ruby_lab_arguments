@@ -14,4 +14,7 @@ class Polygon
     180 * (@num_of_sides - 2)
   end
 
+  def degrees_of_freedom
+    @num_of_sides * 2
+  end
 end
