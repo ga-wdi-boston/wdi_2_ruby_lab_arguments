@@ -10,4 +10,8 @@ class Person
     @hair_color = options[:hair_color]
     @pets = options[:pets] || []
   end
+
+  def weight_in_stone
+    @weight / 6.35
+  end
 end

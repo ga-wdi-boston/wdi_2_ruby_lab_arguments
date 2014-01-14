@@ -43,4 +43,12 @@ describe Person do
       expect(person.pets).to match_array pets
     end
   end
+
+  describe '#weight_in_stone' do
+    it 'returns the weight in stone' do
+      person = Person.new('Mike', weight: 80)
+
+      expect(person.weight_in_stone).to be_within(0.01).of(12.59)
+    end
+  end
 end
