@@ -3,6 +3,8 @@ require_relative '../lib/polygon'
 
 describe Polygon do
   before do
+    # This block will be run before each `it` block within this `describe` block.
+    # If you set up objects in here, you must store them in instance variables.
     @rectangle = Polygon.new(2, 2, 4, 4)
     @septagon = Polygon.new(1, 2, 3, 4, 5, 6, 7)
     @triangle = Polygon.new(3, 4, 5)
