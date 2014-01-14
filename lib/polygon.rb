@@ -8,4 +8,8 @@ class Polygon
   def number_of_corners
     @side_lengths.length
   end
+
+  def degrees_of_freedom
+    2 * number_of_corners
+  end
 end

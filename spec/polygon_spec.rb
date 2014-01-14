@@ -23,4 +23,12 @@ describe Polygon do
       expect(@triangle.number_of_corners).to eq 3
     end
   end
+
+  describe '#degrees_of_freedom' do
+    it 'returns the number of degrees of freedom in the polygon' do
+      expect(@rectangle.degrees_of_freedom).to eq 8
+      expect(@septagon.degrees_of_freedom).to eq 14
+      expect(@triangle.degrees_of_freedom).to eq 6
+    end
+  end
 end
