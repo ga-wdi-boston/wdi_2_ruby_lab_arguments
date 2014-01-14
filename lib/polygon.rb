@@ -12,4 +12,8 @@ class Polygon
   def degrees_of_freedom
     2 * number_of_corners
   end
+
+  def sum_of_interior_angles
+    (number_of_corners - 2) * 180
+  end
 end

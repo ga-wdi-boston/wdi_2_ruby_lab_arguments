@@ -31,4 +31,12 @@ describe Polygon do
       expect(@triangle.degrees_of_freedom).to eq 6
     end
   end
+
+  describe '#sum_of_interior_angles' do
+    it 'returns the sum of the interior angles in the polygon' do
+      expect(@rectangle.sum_of_interior_angles).to eq 360
+      expect(@septagon.sum_of_interior_angles).to eq 900
+      expect(@triangle.sum_of_interior_angles).to eq 180
+    end
+  end
 end
