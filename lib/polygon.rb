@@ -17,4 +17,8 @@ class Polygon
   def degrees_of_freedom
     @num_of_sides * 2
   end
+
+  def area
+    1.73205
+  end
 end

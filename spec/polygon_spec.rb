@@ -37,15 +37,21 @@ describe Polygon do
     end
 
     it 'return 8 for triangle' do
-      polygon = Polygon.new(2,2,2, 2)
+      polygon = Polygon.new(2,2,2,2)
       expect(polygon.degrees_of_freedom).to eq 8
     end
   end
 
-  # describe '#area' do
-  #   it '' do
-  #     expect()
-  #   end
-  # end
+  describe '#area' do
+    it 'returns 1.73205 for a triangle 2,2,2' do
+      polygon = Polygon.new(2,2,2)
+      expect(polygon.area).to eq 1.73205
+    end
+
+    it 'returns 4 for a square 2,2' do
+      polygon = Polygon.new(2,2)
+      expect(polygon.area).to eq 4
+    end
+  end
 
 end
