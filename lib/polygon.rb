@@ -1,9 +1,11 @@
 class Polygon
-  attr_accessor :num_of_sides, :sides_length
+  attr_accessor :num_of_sides, :sides
 
-  def initialize(*sides_length)
-    @num_of_sides = sides_length.length
-    @sides_length = sides_length
+  def initialize(sideA, sideB, sideC, *sides)
+    # Require 3 sides to initialize and splat the rest
+    @sides = [sideA, sideB, sideC]
+    sides.each { |side| @sides << side }
+    @num_of_sides = @sides.length
   end
 
   def number_of_corners
@@ -20,14 +22,14 @@ class Polygon
 
   def area
     # area = 1/2 x perimeter x apothem
-    # apothem = @sides_length / (2 * tan * (180 / # num_of_sides))
+    # apothem = @sides / (2 * tan * (180 / # num_of_sides))
     tan_arg = Math::PI / @num_of_sides
-    apothem = @sides_length[0] / (2 * Math::tan(tan_arg))
-    (0.5 * @num_of_sides * @sides_length[0] * apothem).round(3)
+    apothem = @sides[0] / (2 * Math::tan(tan_arg))
+    (0.5 * @num_of_sides * @sides[0] * apothem).round(3)
   end
 
   def name
-    names = [0,1,2,
+    names = [
       'Triangle',
       'Quadrilateral',
       'Pentagon',
@@ -36,6 +38,12 @@ class Polygon
       'Octagon',
       'Nonagon',
       'Decagon']
-    names[@num_of_sides]
+    names[@num_of_sides-3]
   end
 end
+
+polygon = Polygon.new(2,2,2,2,2)
+
+puts polygon.num_of_sides
+
+p polygon.sides
