@@ -1,5 +1,5 @@
 class Person
-  attr_reader :name, :age, :weight, :height, :eye_color, :hair_color
+  attr_reader :name, :age, :weight, :height, :eye_color, :hair_color, :pets
 
   def initialize(name, options = {})
     @name = name
@@ -8,5 +8,6 @@ class Person
     @height = options[:height] || rand(150..200)
     @eye_color = options[:eye_color]
     @hair_color = options[:hair_color]
+    @pets = options[:pets] || []
   end
 end

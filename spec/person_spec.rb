@@ -1,5 +1,6 @@
 require 'spec_helper'
 require_relative '../lib/person'
+require_relative '../lib/pet'
 
 describe Person do
   describe '#initialize' do
@@ -27,6 +28,19 @@ describe Person do
       expect(person.height).to eq 170
       expect(person.eye_color).to eq 'blue'
       expect(person.hair_color).to eq 'brown'
+    end
+
+    it 'assigns pets to an empty array by default' do
+      person = Person.new('Hongyu')
+
+      expect(person.pets).to eq []
+    end
+
+    it 'assigns an array of pets' do
+      pets = [Pet.new('Poppy'), Pet.new('Bunbun')]
+      person = Person.new('Libby', pets: pets)
+
+      expect(person.pets).to match_array pets
     end
   end
 end
