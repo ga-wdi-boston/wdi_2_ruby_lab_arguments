@@ -27,15 +27,19 @@ class Polygon
     polygons[@sides.length - 1]
   end
 
+  # This does not do anything currently
+
   def area
     points = {}
+    radial_angles = {}
     @sides.length.times do |num|
-      points[("side#{num + 1}".to_sym)] = [] # Fill hash with "sideX" descriptors
+      points[("point#{num}".to_sym)] = [] # Fill hash with "pointX" descriptors
+      # There are n - 2 radial angles
+      radial_angles[("angle#{num + 1}".to_sym)] = nil if num < @sides.length - 2
     end
 
-    puts points
-
-    radial_angles = []
+    points[:point0] = [0, 0] # Always start at origin
+    points[:point1] = [@sides[0], 0] # Move on x-axis
 
   end
 
@@ -51,6 +55,3 @@ end
 
 class PolygonError < StandardError
 end
-
-pentagon = Polygon.new(5,5,5,5,5)
-pentagon.area
