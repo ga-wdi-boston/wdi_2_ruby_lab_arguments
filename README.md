@@ -20,7 +20,7 @@ Write appropriate Rspec tests using TDD for the entirety of this exercise. Test 
 
 ### Pets
 
-You should be able to create a new Pet. The pet must be supplied a name. They have a randomly set default 'species' of "cat", "dog" or "bunny wearing backpack", which can be overridden with an argument. Optionally, they can be given a number of claws, number of teeth, number of backpacks. 
+You should be able to create a new Pet. The pet must be supplied a name. They have a randomly set default 'species' of "cat", "dog" or "bunny wearing backpack", which can be overridden with an argument. Optionally, they can be given a number of claws, number of teeth, number of backpacks.
 
 ### People
 
@@ -33,7 +33,7 @@ You should be able to create a new Person. The person must be supplied a name. T
 * hair_color
 * pets (array)
 
-If no age is provided, then their age should be 0 days. 
+If no age is provided, then their age should be 0 days.
 
 If no weight is provided, the weight should be randomly assigned between 60-100kg
 
@@ -47,9 +47,9 @@ Write a method that will allow them to greet any number of other people objects 
 
 ### Polygon
 
-You should be able to create a new [Polygon](http://en.wikipedia.org/wiki/Polygon). The Polygon can have any number of sides (more than 2). These are all simple or non-intersecting polygons. The arguments to the polygon are the lengths of its sides. 
+You should be able to create a new [Polygon](http://en.wikipedia.org/wiki/Polygon). The Polygon can have any number of sides (more than 2). These are all simple or non-intersecting polygons. The arguments to the polygon are the lengths of its sides.
 
-You should have methods to return: 
+You should have methods to return:
 
 - sum_of_interior_angles
 - number_of_corners
