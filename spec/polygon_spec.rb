@@ -40,4 +40,17 @@ describe Polygon do
 		end
 	end
 
+	describe '#name_poly' do
+
+		it 'will return the correct name based on the number of sides' do
+			new_poly = Polygon.new(5)
+			new_poly2 = Polygon.new(6)
+
+			expect(new_poly.name_poly).to eq "pentagon"
+			expect(new_poly2.name_poly).to eq "hexagon"
+
+		end
+
+	end
+
 end
