@@ -41,8 +41,9 @@ describe Person do
       other_person_1 = Person.new('Jeff')
       other_person_2 = Person.new('Steve')
       other_person_3 = Person.new('Linda')
-      expect(new_person.greeting('Hi', other_person_1)).to eq ['Hi Jeff']
-      expect(new_person).greeting('Hi', other_person_2)).to eq ['Hi Steve'] #Left off here
+      expect(new_person.greeting('Hi', list: [other_person_1])).to eq ['Hi Jeff']
+      expect(new_person.greeting('Hi', list: [other_person_2, other_person_3])).to eq ['Hi Steve', 'Hi Linda'] #Left off here
+      expect(new_person.greeting('Yo', list: [other_person_1, other_person_2])).to eq ['Yo Jeff', 'Yo Steve']
     end
   end
 end
